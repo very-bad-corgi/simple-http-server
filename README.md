@@ -7,8 +7,9 @@
 ## 1. Configuring && Run
 
 ### 1.1 Create symbol link to Userver Framework
+Переходим в корень проекта и отбиваем
 ```bash
-ln -s /home/user/Apps/userver/userver-framework ./userver
+ln -s /home/user/Apps/userver/userver-framework ./third_party/userver/
 ```
 
 ### 1.2 Сборка
