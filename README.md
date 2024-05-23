@@ -2,8 +2,6 @@
 
 [Userver installation instructions](docs/userver_install.md)
 
-## Prebuild
-
 ## 1. Configuring && Run
 
 ### 1.1 Create symbol link to Userver Framework

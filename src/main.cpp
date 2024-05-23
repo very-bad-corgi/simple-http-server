@@ -9,8 +9,5 @@ int main(int argc, char* argv[])
 
   service_template::AppendHello(component_list);
 
-  //service_template::Hello::kName;
-
-
   return userver::utils::DaemonMain(argc, argv, component_list);
 }
