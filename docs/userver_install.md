@@ -53,11 +53,13 @@ sudo dnf install -y $(cat ./scripts/docs/en/deps/fedora-36.md | tr '\n' ' ')
 ```
 В случае ошибки требуется убрать конфликтующий пакет, в моем случае это был ```postgresql-server```, которого в следующей команде нет - она аналогична скрипту **fedora-36.md**
 ``` bash
-sudo dnf install -y clang-devel fmt-devel cryptopp-devel boost-devel c-ares-devel ccache cctz-devel cmake protobuf-devel python3-protobuf protobuf protobuf-compiler cryptopp-devel curl-devel fmt-devel g++ google-benchmark-devel grpc-devel grpc-plugins gtest-devel hiredis-devel jemalloc-devel libasan libatomic libev-devel libpq-devel libubsan yaml-cpp yaml-cpp-devel mongo-c-driver-devel nghttp2-devel ninja openldap-devel python3-devel python3-jinja2 python3-protobuf python3-voluptuous redis yaml-cpp-devel zlib-devel libsigsegv-devel libev-devel http-parser-devel libnghttp2-devel
+sudo dnf install -y clang-devel fmt-devel cryptopp-devel boost-devel c-ares-devel ccache cctz-devel cmake protobuf-devel python3-protobuf protobuf protobuf-compiler curl-devel g++ google-benchmark-devel grpc-devel grpc-plugins gtest-devel hiredis-devel jemalloc-devel libasan libatomic libpq-devel libubsan yaml-cpp mongo-c-driver-devel nghttp2-devel ninja openldap-devel python3-devel python3-jinja2 python3-protobuf python3-voluptuous redis yaml-cpp-devel zlib-devel libsigsegv-devel libev-devel http-parser-devel libnghttp2-devel
 ```
 
-Так же:
+Рекомендую поставить так же:
 ```
+sudo dnf install gcc gcc-c++ clang-devel libasan libasan-static
+
 sudo dnf install python3-pip
 pip3 install virtualenv
 ```
