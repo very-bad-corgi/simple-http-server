@@ -4,11 +4,12 @@
 
 ## 1. Configuring && Run
 
-### 1.1 Create symbol link to Userver Framework
-```bash
-ln -s /home/user/Apps/userver/userver-framework ./userver
-```
+### 1.1 Create ( rewrite ) symbol link to Userver Framework
 
+```bash
+ln -sfT ~/Apps/userver/ ./third_party/userver
+```
+> Execute from project root directory
 ### 1.2 Сборка
 ```bash
 mkdir build && cd build

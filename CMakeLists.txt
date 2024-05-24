@@ -1,8 +1,11 @@
 cmake_minimum_required(VERSION 3.12)
 project(http_server CXX)
 
+# Enable AddressSanitizer
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -g")
+
 # Adding userver dependency
-find_package(userver COMPONENTS core postgresql QUIET)
+find_package(userver COMPONENTS core QUIET)
 if(NOT userver_FOUND)  # Fallback to subdirectory usage
     if (EXISTS third_party/userver)
         message(STATUS "Using userver framework from third_party/userver")
@@ -27,5 +30,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE ${PROJECT_NAME}_objs)
 
 ### Sviataslau. Library for working with Json
 ### sudo apt install nlohmann-json3-dev
-find_package(nlohmann_json REQUIRED)
-target_link_libraries(${PROJECT_NAME} PRIVATE nlohmann_json::nlohmann_json)
+### sud dnf install
+#find_package(nlohmann_json REQUIRED)
+#target_link_libraries(${PROJECT_NAME} PRIVATE nlohmann_json::nlohmann_json)
